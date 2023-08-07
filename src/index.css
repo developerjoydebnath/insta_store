@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.rotate {
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* @layer base {
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        font-family: 'Inter', sans-serif;
+    }
+
+
+    h1 {
+        @apply 2xl:text-5xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl;
+    }
+
+    h2 {
+        @apply 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-lg;
+    }
+
+    h3 {
+        @apply 2xl:text-5xl xl:text-3xl lg:text-2xl md:text-xl sm:text-lg text-base;
+    }
+
+    h4 {
+        @apply 2xl:text-5xl xl:text-2xl lg:text-xl md:text-lg sm:text-base text-sm;
+    }
+
+    h5 {
+        @apply 2xl:text-5xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-xs;
+    }
+
+    h6 {
+        @apply 2xl:text-5xl xl:text-lg lg:text-base md:text-sm sm:text-xs text-[10px];
+    }
+} */
+
+/* @layer base {
+    body {
+        @apply bg-gray-100
+    }
+} */
+
+@layer components {
+    .input-field {
+        @apply w-[90%] text-lg h-14 rounded-full border border-gray-300 outline-none ps-6 bg-white;
+    }
+
+    .icon-input {
+        @apply absolute top-4 text-2xl left-[86%] text-gray-700
+    }
+
+    .btn-field {
+        @apply text-lg text-white font-light h-14 btn bg-primary w-[90%] rounded-full border-none ps-4 my-4
+    }
+
+    .bg-style-div {
+        @apply absolute z-0 bg-gradient-to-r from-pink-700 to-purple-500 h-full w-1/2 rounded-r-[60%] left-0
+    }
+
+    .input-field-error {
+        @apply flex items-center ps-10 mt-1
+    }
+
+    .input-error {
+        @apply text-start ms-1 text-error
+    }
+
+    .inputBox {
+        @apply my-3 relative
+    }
+
+    .user-dropdown-li {
+        @apply py-3 hover:text-primary hover:fill-primary fill-neutral text-neutral font-semibold flex justify-start ps-5 items-center gap-3
+    }
+}
+
+
+.cart-div:hover .inner-cart-div p {
+    color: #ff0000;
+}
+.cart-div:hover .cart-icon {
+    fill: #ff0000;
+}
+
+.user-div:hover .inner-user-div p {
+    color: #ff0000;
+}
+.user-div:hover .user-icon {
+    fill: #ff0000;
+}
+
+.sub-list{
+    background: red;
+    transition-delay: 500ms;
+}
+
+.user-dropdown{
+    margin-top: 10px;
+    visibility: hidden;
+    opacity: 0;
+}
+.user-icon-div:hover .user-dropdown {
+    margin-top: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+    z-index: 20;
+}
+
+.js__user-dropdown-ul {
+    box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.205);
+    
+}
+
+.js__user-menu-li:hover .js__user-menu-name {
+    color: #ff0000;
+}
+.js__user-menu-li:hover .js__user-menu-icon {
+    fill: #ff0000;
+}
+
+.js__cart-div{
+    height: calc(100vh - 200px);
+    overflow-x: auto;
+}
+
+.js__favourite-div{
+    height: calc(100vh - 150px);
+    overflow-x: auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+
+
+
